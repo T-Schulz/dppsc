@@ -41,7 +41,7 @@ Dies verlinkt auf die zugrunde liegende Data Science Projekt Template - Dokument
 [Zur Dokumentation](docs/project.md)
 
 Lokale Hauptseite des Repositories:
-[Zurück zur Repository-Startseite](/)
+[Zurück zur Repository-Startseite](/README.md)
 
 Komplette Webadresse:
 [Projekt auf GitHub](https://github.com/T-Schulz/dppsc/tree/refs/heads/main)
