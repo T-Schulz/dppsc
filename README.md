@@ -34,17 +34,17 @@ Somit sind individuelle Kartendarstellungen als Bausteine für ein persönliches
 
 ## Setup
 
-Dies verlinkt auf eine Datei innerhalb desselben GitHub-Projekts:
-[Zur Dokumentation](docs/anleitung.md)
+Dies verlinkt auf diese README Datei innerhalb dieses GitHub-Projekts:
+[Zur Dokumentation](docs/project.md)
 
-Hauptseite des Repositories:
+Lokale Hauptseite des Repositories:
 [Zurück zur Repository-Startseite](/)
 
 Komplette Webadresse:
 [Projekt auf GitHub](https://github.com/T-Schulz/dppsc/tree/refs/heads/main)
 
-Code Datei:
-[Quellcode anzeigen](/src/main.js)
+Notebook Datei:
+[Quellcode anzeigen](/notebooks/01_exploration.ipynb)
 
 ---
 
