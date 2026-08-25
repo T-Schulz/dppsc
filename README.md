@@ -41,7 +41,7 @@ Hauptseite des Repositories:
 [Zurück zur Repository-Startseite](/)
 
 Komplette Webadresse:
-[Projekt auf GitHub](https://github.com)
+[Projekt auf GitHub](https://github.com/T-Schulz/dppsc/tree/refs/heads/main)
 
 Code Datei:
 [Quellcode anzeigen](/src/main.js)
