@@ -45,6 +45,7 @@ Lokale Hauptseite des Repositories:
 
 Komplette Webadresse:
 [Projekt auf GitHub](https://github.com/T-Schulz/dppsc/tree/refs/heads/main)
+[GitHub website](https://t-schulz.github.io/dppsc/index.html)
 
 Notebook Datei:
 [Quellcode anzeigen](/notebooks/01_exploration.ipynb)
@@ -54,18 +55,22 @@ Notebook Datei:
 ### Smart City Beispiele
 
 1. Digitaler Zwilling H-Bahn TU-Dortmund (2D OSM Karte):  
-[2D_H-Bahn_TU-Dortmund](https://t-schulz.github.io/schulz-dev-hub/karte3.html)  
-Next step: Erweiterung H-Bahn-Netz  
+[2D_H-Bahn_TU-Dortmund](https://t-schulz.github.io/dppsc/1_H-Bahn.html)  
+Next step: Erweiterung H-Bahn-Netz Fertig - Fine-tuning. 
 
 2. 3D Stadtmodel für das DiWoDo-Event Digitale Woche Dortmund:  
-[3D_Dortmund](https://t-schulz.github.io/3D_viewer/Option6_OSM_B_jumb.html)  
+[3D_Dortmund](https://t-schulz.github.io/dppsc/2_DiWoDo.html)  
 DiWoDo Veranstaltungen:  
 [DiWoDo](https://www.diwodo.de/)  
-Next step: Event-Ortsdaten laden und mit der Karte verknüpfen.  
+Next step: Daten laden Fertig - Fine-tuning.  
 
-3. Beispiel tbd: Daten Vergleich OSM vs. Stadt Geoserver ALKIS  
-[OSM vs. ALKIS](https://geoweb1.digistadtdo.de/doris_gdi/opengeodata/alkis/)  
-Next step: ALKIS Daten laden  
+3. Beispiel Quellen Check: Daten Vergleich OSM vs. Stadt Geoserver ALKIS  
+[OSM vs. ALKIS](https://t-schulz.github.io/dppsc/3_OSM_vs_ALKIS.html)  
+Next step: notebook säubern  
+
+4. Beispiel IoT: Aktuelle Temperatur-Daten  
+[OSM vs. ALKIS](https://t-schulz.github.io/dppsc/4_IoT.html)  
+Next step: Check github actions bzgl. updates von Temperaturen in dortmund-iot json File  
 
 <!--
 2. Beispiel
