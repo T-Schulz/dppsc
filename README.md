@@ -69,7 +69,7 @@ Next step: Daten laden Fertig - Fine-tuning.
 Next step: notebook säubern  
 
 4. Beispiel IoT: Aktuelle Temperatur-Daten  
-[OSM vs. ALKIS](https://t-schulz.github.io/dppsc/4_IoT.html)  
+[IoT](https://t-schulz.github.io/dppsc/4_IoT.html)  
 Next step: Check github actions bzgl. updates von Temperaturen in dortmund-iot json File  
 
 <!--
