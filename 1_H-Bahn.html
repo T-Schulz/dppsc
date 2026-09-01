@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TU Dortmund (H-Bahn Dashboard)</title>
+    <link rel="stylesheet" href="leaflet.css" />
+    <style>
+        :root { --bg: #f4f4f9; --text: #333; --card-bg: #ffffff; --accent: #007bff; --border: #e0e0e0; }
+        [data-theme="dark"] { --bg: #121212; --text: #e0e0e0; --card-bg: #1e1e1e; --accent: #00adb5; --border: #333333; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 40px 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-bottom: 20px; }
+        .btn-link { display: inline-block; background-color: #333; color: white !important; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-bottom: 15px; border: none; }
+        .card { background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 20px; }
+        #map { height: 480px; width: 100%; border-radius: 8px; border: 1px solid var(--border); z-index: 1; }
+        .logger-title { margin-top: 20px; font-size: 0.95rem; font-weight: bold; }
+        .coord-logger { width: 100%; height: 90px; font-family: monospace; font-size: 12px; padding: 10px; border-radius: 6px; border: 1px solid var(--border); background-color: var(--bg); color: var(--text); box-sizing: border-box; resize: vertical; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="btn-link" href="index.html">← Zurück zur Hauptseite</a>
+        <header>
+            <h2>🚟 TU Dortmund (H-Bahn Dashboard)</h2>
+            <div style="font-weight: bold; color: #27ae60; font-size: 0.9rem;">System: Online ✔</div>
+        </header>
+
+        <!-- 1. Hauptkarte (Stabiles Layout, füllt die Breite perfekt aus) -->
+        <div class="card" style="padding: 15px; margin-bottom: 20px;">
+            <div id="map"></div>
+            <div class="logger-title">📋 GPS-Sammelbox (Rechtsklick auf Karte fügt Punkte hinzu):</div>
+            <textarea class="coord-logger" id="meinKartenLogger" readonly placeholder="Rechtsklick auf die Karte fügt Daten im JSON-Format ein..."></textarea>
+            
+            <!-- Steuerungs-Buttons für den Logger -->
+            <div style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <button id="btnCopyJson" class="btn-link" style="margin: 0; background-color: #27ae60; cursor: pointer;">📋 Gesamtes JSON kopieren</button>
+                <button id="btnClearLogger" class="btn-link" style="margin: 0; background-color: #e74c3c; cursor: pointer;">🗑️ Box leeren</button>
+                <button id="btnTogglePoints" class="btn-link" style="margin: 0; background-color: #2980b9; cursor: pointer;">👁️ Punkte anzeigen</button>
+            </div>
+        </div>
+
+        <!-- 2. Dashboard-Kacheln (Bereinigt auf Linie 1 & 2 + Live km/h) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-bottom: 20px; width: 100%; box-sizing: border-box;">
+            <!-- Kachel Linie 1 -->
+            <div style="background: var(--card-bg); padding: 15px; border-radius: 12px; border: 1px solid var(--border); border-left: 5px solid #f39c12; box-sizing: border-box;">
+                <h4 style="margin: 0 0 8px 0; color: #f39c12;">🚟 Fahrplan-Waggon (Linie 1)</h4>
+                <div id="dashL1Status" style="font-size: 0.9rem; font-weight: bold; margin-bottom: 5px;">Berechne Position...</div>
+                <div id="dashL1Speed" style="font-size: 0.85rem; color: #27ae60; font-weight: bold; margin-bottom: 5px;">Tempo: 0 km/h</div>
+                <div id="dashL1Eta" style="font-size: 0.85rem; color: #666; margin-bottom: 10px;">Nächster Halt: --:--</div>
+                <a href="https://www.bus-und-bahn.de/fahrplan/hbahn/linie_1/" target="_blank" style="font-size: 0.8rem; color: var(--accent); text-decoration: none; font-weight: bold;">➡️ Offizieller Fahrplan (Linie 1)</a>
+            </div>
+
+            <!-- Kachel Express / Test-Waggon -->
+            <div style="background: var(--card-bg); padding: 15px; border-radius: 12px; border: 1px solid var(--border); border-left: 5px solid #e74c3c; box-sizing: border-box;">
+                <h4 style="margin: 0 0 8px 0; color: #e74c3c;">🚀 Express-Test-Waggon</h4>
+                <div id="dashExpressStatus" style="font-size: 0.9rem; font-weight: bold; margin-bottom: 5px;">Berechne...</div>
+                <div id="dashExpressSpeed" style="font-size: 0.85rem; color: #e74c3c; font-weight: bold; margin-bottom: 5px;">Tempo: 0 km/h</div>
+                <div id="dashExpressEta" style="font-size: 0.85rem; color: #666; margin-bottom: 10px;">Geschwindigkeit: Fest eingestellt</div>
+            </div>
+
+            <!-- Kachel Strecke 2 -->
+            <div style="background: var(--card-bg); padding: 15px; border-radius: 12px; border: 1px solid var(--border); border-left: 5px solid #9b59b6; box-sizing: border-box;">
+                <h4 style="margin: 0 0 8px 0; color: #9b59b6;">🚟 Campus-Pendel (Linie 2)</h4>
+                <div id="dashL2Status" style="font-size: 0.9rem; font-weight: bold; margin-bottom: 5px;">Berechne Position...</div>
+                <div id="dashL2Speed" style="font-size: 0.85rem; color: #9b59b6; font-weight: bold; margin-bottom: 5px;">Tempo: 0 km/h</div>
+                <div id="dashL2Eta" style="font-size: 0.85rem; color: #666; margin-bottom: 10px;">Nächster Halt: --:--</div>
+                <a href="https://www.bus-und-bahn.de/fahrplan/hbahn/linie_2/" target="_blank" style="font-size: 0.8rem; color: var(--accent); text-decoration: none; font-weight: bold;">➡️ Offizieller Fahrplan (Linie 2)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skripte laden -->
+    <script src="leaflet.js"></script>
+    <script src="hbahn-data.js"></script>
+    
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        }
+
+        // ====================================================================
+        // PHYSIKALISCHE GEOMETRIE-ENGINE (DISTANZ IN METERN)
+        // ====================================================================
+        
+        // Berechnet die Gesamtlänge einer Strecke in Metern
+        function getRouteLengthInMeters(map, coords) {
+            if (!coords || coords.length < 2) return 0;
+            let totalDistance = 0;
+            for (let i = 0; i < coords.length - 1; i++) {
+                totalDistance += map.distance(coords[i], coords[i + 1]);
+            }
+            return totalDistance;
+        }
+
+        // Findet die genaue Koordinate basierend auf der Entfernung in Metern vom Start
+        function getPositionAtDistance(map, coords, targetDistanceInMeters) {
+            if (!coords || coords.length === 0) return [51.4835, 7.4110];
+            if (targetDistanceInMeters <= 0) return coords[0];
+            
+            let accumulatedDistance = 0;
+
+            for (let i = 0; i < coords.length - 1; i++) {
+                const p1 = coords[i];
+                const p2 = coords[i + 1];
+                const segmentDistance = map.distance(p1, p2);
+
+                // Liegt die gesuchte Distanz in diesem Segment?
+                if (accumulatedDistance + segmentDistance >= targetDistanceInMeters) {
+                    const remainingDistanceInSegment = targetDistanceInMeters - accumulatedDistance;
+                    const fraction = segmentDistance > 0 ? (remainingDistanceInSegment / segmentDistance) : 0;
+                    
+                    // Lineare Interpolation der Koordinaten im aktuellen Segment
+                    const lat = p1[0] + (p2[0] - p1[0]) * fraction;
+                    const lng = p1[1] + (p2[1] - p1[1]) * fraction;
+                    return [lat, lng];
+                }
+                accumulatedDistance += segmentDistance;
+            }
+            
+            // Fallback: Wenn Distanz größer als Strecke, liefere Endpunkt
+            return coords[coords.length - 1];
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // ====================================================================
+            // 1. KARTE LADEN & AUTOMATISCHER GEOMETRIE-ZOOM
+            // ====================================================================
+            const map = L.map('map');
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { 
+                maxZoom: 19, 
+                attribution: '&copy; OpenStreetMap' 
+            }).addTo(map);
+            L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
+
+            // Lädt den Zoom direkt und scharf anhand der echten Schienen-Geometrie
+            if (hbahnData.strecke1 && hbahnData.strecke2) {
+                const alleStrecken = L.featureGroup([
+                    L.polyline(hbahnData.strecke1), 
+                    L.polyline(hbahnData.strecke2)
+                ]);
+                map.fitBounds(alleStrecken.getBounds().pad(0.08)); // 8% Rand für perfekten Fokus
+            } else {
+                map.setView([51.4835, 7.4110], 16);
+            }
+
+            // ====================================================================
+            // LIVE-KOORDINATEN ANZEIGE BEI MAUSBEWEGUNG
+            // ====================================================================
+            const CoordControl = L.Control.extend({
+                options: { position: 'bottomright' },
+                onAdd: function() {
+                    const container = L.DomUtil.create('div', 'coordinate-box');
+                    container.style.background = 'rgba(255,255,255,0.8)';
+                    container.style.padding = '5px';
+                    container.style.borderRadius = '4px';
+                    container.innerHTML = "Lat: 51.48350, Lon: 7.41100";
+                    map.on('mousemove', function(e) {
+                        container.innerHTML = `Lat: ${e.latlng.lat.toFixed(5)}, Lon: ${e.latlng.lng.toFixed(5)}`;
+                    });
+                    return container;
+                }
+            }); // KORREKTUR: Hier wurde die Definition der Control-Klasse geschlossen
+            map.addControl(new CoordControl()); // KORREKTUR: Hier wurde das Element der Karte hinzugefügt
+
+            // ====================================================================
+            // NEU: STRECKENPUNKTE VISUALISIEREN (ROT)
+            // ====================================================================
+            const btnTogglePoints = document.getElementById("btnTogglePoints");
+            
+            // Layer-Gruppe für die roten Punkte
+            const punkteLayerGruppe = L.layerGroup();
+            let punkteSichtbar = false;
+
+            // Funktion, um die Punkte zu generieren (KORRIGIERT: Keine doppelte Anzeige mehr)
+            function zeichneStreckenPunkte() {
+                punkteLayerGruppe.clearLayers(); // Altes Zeichnen löschen
+
+                // Punkte für Strecke 1 hinzufügen
+                if (hbahnData.strecke1) {
+                    hbahnData.strecke1.forEach((coord, index) => {
+                        L.circleMarker(coord, {
+                            radius: 5,
+                            fillColor: "#e74c3c", // Deutlich rot
+                            color: "#c0392b",
+                            weight: 1,
+                            opacity: 1,
+                            fillOpacity: 1
+                        })
+                        .addTo(punkteLayerGruppe)
+                        .bindPopup(`<b>Strecke 1</b><br>Punkt-Index: ${index}<br>Lat: ${coord[0].toFixed(5)}<br>Lng: ${coord[1].toFixed(5)}`); // KORREKTUR hier
+                    });
+                }
+
+                // Punkte für Strecke 2 hinzufügen
+                if (hbahnData.strecke2) {
+                    hbahnData.strecke2.forEach((coord, index) => {
+                        L.circleMarker(coord, {
+                            radius: 5,
+                            fillColor: "#e74c3c", // Deutlich rot
+                            color: "#c0392b",
+                            weight: 1,
+                            opacity: 1,
+                            fillOpacity: 1
+                        })
+                        .addTo(punkteLayerGruppe)
+                        .bindPopup(`<b>Strecke 2</b><br>Punkt-Index: ${index}<br>Lat: ${coord[0].toFixed(5)}<br>Lng: ${coord[1].toFixed(5)}`); // KORREKTUR hier
+                    });
+                }
+            }
+
+            // Klick-Event für den Button
+            btnTogglePoints.addEventListener("click", function() {
+                punkteSichtbar = !punkteSichtbar;
+
+                if (punkteSichtbar) {
+                    zeichneStreckenPunkte();
+                    map.addLayer(punkteLayerGruppe);
+                    btnTogglePoints.innerHTML = "🙈 Punkte ausblenden";
+                    btnTogglePoints.style.backgroundColor = "#7f8c8d";
+                } else {
+                    map.removeLayer(punkteLayerGruppe);
+                    btnTogglePoints.innerHTML = "👁️ Punkte anzeigen";
+                    btnTogglePoints.style.backgroundColor = "#2980b9";
+                }
+            });
+
+            // Doppelte Koordinaten-Anzeige hier auskommentiert. Siehe oben Live-Koordinaten-Anzeige
+            // map.addControl(new CoordControl());
+
+            // 2. Schienennetz aus hbahn-data.js zeichnen
+            L.polyline(hbahnData.strecke1, { color: '#78909c', weight: 6, opacity: 0.5 }).addTo(map);
+            L.polyline(hbahnData.strecke2, { color: '#4caf50', weight: 6, opacity: 0.5 }).addTo(map); // Strecke 2 in grün
+
+            // 3. Haltestellen zeichnen (Große Kreise)
+            hbahnData.haltestellen.forEach(function(stat) {
+                L.circleMarker(stat.coords, { radius: 9, fillColor: "#00adb5", color: "#ffffff", weight: 2.5, opacity: 1, fillOpacity: 1 })
+                 .addTo(map).bindPopup(`<h3>${stat.name}</h3>${stat.info}`);
+            });
+
+            // ====================================================================
+            // WAGGON-INITIALISIERUNG
+            // ====================================================================
+            const fahrplanWaggon = L.circleMarker(hbahnData.strecke1[0], {
+                radius: 12, fillColor: "#f39c12", color: "#ffffff", weight: 2, opacity: 1, fillOpacity: 0.85
+            }).addTo(map);
+            fahrplanWaggon.bindPopup("<b>🚟 Fahrplan-Waggon (Linie 50)</b>");
+
+            const expressWaggon = L.circleMarker(hbahnData.strecke1[0], {
+                radius: 7, fillColor: "#e74c3c", color: "#ffffff", weight: 2, opacity: 1, fillOpacity: 1
+            }).addTo(map);
+            expressWaggon.bindPopup("<b>🚀 Express-Test-Waggon</b>");
+
+            // Initialisierung für Strecke 2 Waggon mit Fallback-Koordinate falls Strecke leer ist
+            const s2Start = (hbahnData.strecke2 && hbahnData.strecke2.length > 0) ? hbahnData.strecke2[0] : [51.4835, 7.4110];
+            const strecke2Waggon = L.circleMarker(s2Start, {
+                radius: 10, fillColor: "#9b59b6", color: "#ffffff", weight: 2, opacity: 1, fillOpacity: 0.9
+            }).addTo(map);
+            strecke2Waggon.bindPopup("<b>🚟 Campus-Pendel (Strecke 2)</b>");
+
+            // ====================================================================
+            // ANIMATIONS-TIMER TEIL 1: GEOMETRIEN & LINIE 1
+            // ====================================================================
+            
+            // Distanzen und Geometrien berechnen
+            const laengeStrecke1 = getRouteLengthInMeters(map, hbahnData.strecke1);
+            const laengeStrecke2 = getRouteLengthInMeters(map, hbahnData.strecke2);
+
+            // Sichere Tiefenkopie für die Rückfahrten (Verhindert Array-Konflikte)
+            const rueckfahrtRoute1 = JSON.parse(JSON.stringify(hbahnData.strecke1)).reverse();
+            const rueckfahrtRoute2 = JSON.parse(JSON.stringify(hbahnData.strecke2)).reverse();
+
+            // Richtungs-Variablen für die Simulation (Einmalig definiert)
+            let expressDirection = true;
+            let expressProgress = 0;
+            
+            let strecke2Direction = true;
+            let strecke2Progress = 0;
+
+            setInterval(() => {
+                const jetzt = new Date();
+                const aktuelleMinute = jetzt.getMinutes();
+                const aktuelleSekunde = jetzt.getSeconds();
+
+                // ====================================================================
+                // TIMING & ETA FÜR LINIE 1 (10-Minuten-Takt - Angepasst an Array-Start)
+                // ====================================================================
+                const l1AktuelleMinuteEndziffer = aktuelleMinute % 10;
+                
+                let fahrplanPos, fahrplanText = "", statusInfo = "", etaText = "", speedL1 = 0;
+
+                // --- HINFAHRT: Eichlinghofen -> Technologiezentrum (Endziffern .2 bis .9) ---
+                // Da strecke1[0] Eichlinghofen ist, bewegen wir uns hier real von Süd nach Nord!
+                if (l1AktuelleMinuteEndziffer >= 2 && l1AktuelleMinuteEndziffer < 10) {
+                    const gesamtSekundenFahrt = ((l1AktuelleMinuteEndziffer - 2) * 60) + aktuelleSekunde;
+                    const fortschritt = gesamtSekundenFahrt / 480; // 8 Minuten Fahrzeit
+                    const meter = fortschritt * laengeStrecke1;
+                    
+                    // Nutzt die Originalstrecke von Eichlinghofen zum TZ
+                    fahrplanPos = getPositionAtDistance(map, hbahnData.strecke1, meter);
+                    statusInfo = "Fahrt Richtung Technologiezentrum 🟢";
+                    speedL1 = Math.round((laengeStrecke1 / 480) * 3.6);
+
+                    // Ziele auf dem Weg nach Norden (Eichlinghofen -> Campus Süd -> Uni -> TZ)
+                    if (gesamtSekundenFahrt < 120) {
+                        // Erste 2 Minuten: Auf dem Weg zum Campus Süd
+                        fahrplanText = "Nächster Halt: <b>Campus Süd</b>";
+                        etaText = `Ankunft Campus Süd in ca.: ${120 - gesamtSekundenFahrt}s`;
+                    } else if (gesamtSekundenFahrt >= 120 && gesamtSekundenFahrt < 300) {
+                        // Nächste 3 Minuten: Auf dem Weg zur Uni (S)
+                        fahrplanText = "Nächster Halt: <b>Dortmund Universität (S)</b>";
+                        etaText = `Ankunft Uni (S) in ca.: ${300 - gesamtSekundenFahrt}s`;
+                    } else {
+                        // Letzte 3 Minuten: Auf dem Weg zum Technologiezentrum
+                        fahrplanText = "Nächster Halt: <b>Technologiezentrum (Endstation)</b>";
+                        etaText = `Ankunft Technologiezentrum in ca.: ${480 - gesamtSekundenFahrt}s`;
+                    }
+                } 
+                // --- HALT AM TECHNOLOGIEZENTRUM: Minute .0 ---
+                else if (l1AktuelleMinuteEndziffer === 0) {
+                    // Waggon steht am Ende von Strecke 1 (Technologiezentrum)
+                    fahrplanPos = hbahnData.strecke1[hbahnData.strecke1.length - 1];
+                    fahrplanText = "Halt im <b>Technologiezentrum</b>.<br>Fahrgastwechsel.";
+                    statusInfo = "Halt am Bahnsteig (Nord) 🟡";
+                    speedL1 = 0;
+                    etaText = `Abfahrt Richtung Eichlinghofen in: ${60 - aktuelleSekunde}s`;
+                } 
+                // --- RÜCKFAHRT: Technologiezentrum -> Eichlinghofen (Endziffern .1 bis .8 der Folgeminuten) ---
+                else {
+                    const gesamtSekundenFahrt = ((l1AktuelleMinuteEndziffer - 1) * 60) + aktuelleSekunde;
+                    
+                    if (gesamtSekundenFahrt < 480) { // 8 Minuten Rückfahrt
+                        const fortschritt = gesamtSekundenFahrt / 480;
+                        const meter = fortschritt * laengeStrecke1;
+                        
+                        // Nutzt die umgedrehte Route vom TZ zurück nach Eichlinghofen
+                        fahrplanPos = getPositionAtDistance(map, rueckfahrtRoute1, meter);
+                        statusInfo = "Rückfahrt Richtung Eichlinghofen 🟢";
+                        speedL1 = Math.round((laengeStrecke1 / 480) * 3.6);
+                        
+                        // Ziele auf dem Weg nach Süden (TZ -> Uni -> Campus Süd -> Eichlinghofen)
+                        if (gesamtSekundenFahrt < 240) {
+                            // Bis zur Uni
+                            fahrplanText = "Nächster Halt: <b>Dortmund Universität (S)</b>";
+                            etaText = `Ankunft Universität (S) in ca.: ${240 - gesamtSekundenFahrt}s`;
+                        } else if (gesamtSekundenFahrt >= 240 && gesamtSekundenFahrt < 420) {
+                            // Von Uni zum Campus Süd
+                            fahrplanText = "Nächster Halt: <b>Campus Süd</b>";
+                            etaText = `Ankunft Campus Süd in ca.: ${420 - gesamtSekundenFahrt}s`;
+                        } else {
+                            // Endspurt nach Eichlinghofen
+                            fahrplanText = "Nächster Halt: <b>Eichlinghofen (Endstation)</b>";
+                            etaText = `Ankunft Eichlinghofen in ca.: ${480 - gesamtSekundenFahrt}s`;
+                        }
+                    } else {
+                        // --- PAUSE IN EICHLINGHOFEN: Bis der Takt bei Endziffer 2 neu startet ---
+                        fahrplanPos = hbahnData.strecke1[0]; // Zurück auf Startposition Eichlinghofen
+                        fahrplanText = "Wartet in <b>Eichlinghofen</b>.";
+                        statusInfo = "Pause am Bahnsteig (Süd) 🔵";
+                        speedL1 = 0;
+                        const restSekunden = (l1AktuelleMinuteEndziffer === 8) ? (120 - aktuelleSekunde) : (60 - aktuelleSekunde);
+                        etaText = `Nächste Planfahrt in: ${restSekunden}s`;
+                    }
+                }
+
+                fahrplanWaggon.setLatLng(fahrplanPos);
+                fahrplanWaggon.getPopup().setContent(`<h3>🚟 Linie 1</h3>${fahrplanText}`);
+                document.getElementById("dashL1Status").innerHTML = statusInfo;
+                document.getElementById("dashL1Speed").innerHTML = `Tempo: ${speedL1} km/h`;
+                document.getElementById("dashL1Eta").innerHTML = etaText;
+
+                // --------------------------------------------------------------------
+                // --- B. BLEIBT: EXPRESS-WAGGON (ZUM KOORDINATEN-LOGGEN) ---
+                // --------------------------------------------------------------------
+                const vExpressPerTick = 4;
+                if (expressDirection) {
+                    expressProgress += vExpressPerTick;
+                    if (expressProgress >= laengeStrecke1) expressDirection = false;
+                } else {
+                    expressProgress -= vExpressPerTick;
+                    if (expressProgress <= 0) expressDirection = true;
+                }
+                const expressPos = getPositionAtDistance(map, hbahnData.strecke1, expressProgress);
+                expressWaggon.setLatLng(expressPos);
+                const speedExpress = Math.round((vExpressPerTick * 20) * 3.6);
+                const expZiel = expressDirection ? "Technologiezentrum" : "Eichlinghofen";
+                expressWaggon.getPopup().setContent(`<h3>🚀 Express-Waggon</h3>Ziel: ${expZiel}`);
+                document.getElementById("dashExpressStatus").innerHTML = `Testlauf nach ${expZiel} ⚡`;
+                document.getElementById("dashExpressSpeed").innerHTML = `Tempo: ${speedExpress} km/h`;
+
+
+                // ====================================================================
+                // TIMING & ETA FÜR LINIE 2 (5-Minuten-Takt)
+                // ====================================================================
+                const l2GesamtSekunden = (aktuelleMinute % 5 * 60) + aktuelleSekunde; 
+                
+                let s2Pos, l2Text = "", l2Status = "", l2Eta = "", speedL2 = 0;
+
+                if (l2GesamtSekunden >= 0 && l2GesamtSekunden < 120) {
+                    const fortschritt = l2GesamtSekunden / 120;
+                    const meter = fortschritt * laengeStrecke2;
+                    s2Pos = getPositionAtDistance(map, hbahnData.strecke2, meter);
+                    l2Text = "Unterwegs nach: <b>Campus Nord</b>";
+                    l2Status = "Pendelt nach Campus Nord 🔄";
+                    speedL2 = Math.round((laengeStrecke2 / 120) * 3.6);
+                    l2Eta = `Ankunft Nord in: ${120 - l2GesamtSekunden}s`;
+
+                } else if (l2GesamtSekunden >= 120 && l2GesamtSekunden < 180) {
+                    s2Pos = hbahnData.strecke2[hbahnData.strecke2.length - 1]; 
+                    l2Text = "Halt in <b>Campus Nord</b>.<br>Fahrgastwechsel.";
+                    l2Status = "Pause am Bahnsteig (Nord) 🟡";
+                    speedL2 = 0;
+                    l2Eta = `Rückfahrt nach Süd in: ${180 - l2GesamtSekunden}s`;
+
+                } else {
+                    const fortschritt = (l2GesamtSekunden - 180) / 120;
+                    const meter = fortschritt * laengeStrecke2;
+                    s2Pos = getPositionAtDistance(map, rueckfahrtRoute2, meter);
+                    l2Text = "Rückfahrt nach: <b>Campus Süd</b>";
+                    l2Status = "Pendelt nach Campus Süd 🔄";
+                    speedL2 = Math.round((laengeStrecke2 / 120) * 3.6);
+                    l2Eta = `Ankunft Süd in: ${300 - l2GesamtSekunden}s`;
+                }
+
+                strecke2Waggon.setLatLng(s2Pos);
+                strecke2Waggon.getPopup().setContent(`<h3>🚟 Linie 2</h3>${l2Text}`);
+                document.getElementById("dashL2Status").innerHTML = l2Status;
+                document.getElementById("dashL2Speed").innerHTML = `Tempo: ${speedL2} km/h`;
+                document.getElementById("dashL2Eta").innerHTML = l2Eta;
+
+            }, 50);
+
+            // ====================================================================
+            // 5. ERWEITERTER RECHTSKLICK-LOGGER (JSON-FORMAT)
+            // ====================================================================
+            const loggerBox = document.getElementById("meinKartenLogger");
+            const btnCopy = document.getElementById("btnCopyJson");
+            const btnClear = document.getElementById("btnClearLogger");
+            
+            let geklicktePunkte = [];
+
+            map.on('contextmenu', function(e) {
+                const lat = parseFloat(e.latlng.lat.toFixed(6));
+                const lng = parseFloat(e.latlng.lng.toFixed(6));
+                geklicktePunkte.push([lat, lng]);
+                loggerBox.value = JSON.stringify(geklicktePunkte, null, 2);
+                navigator.clipboard.writeText(`[${lat}, ${lng}]`);
+            });
+
+            btnCopy.addEventListener("click", function() {
+                if (geklicktePunkte.length === 0) {
+                    alert("Die Sammelbox ist noch leer!");
+                    return;
+                }
+                navigator.clipboard.writeText(loggerBox.value);
+                const originalText = btnCopy.innerHTML;
+                btnCopy.innerHTML = "✔ Kopiert!";
+                btnCopy.style.backgroundColor = "#2ecc71";
+                setTimeout(() => {
+                    btnCopy.innerHTML = originalText;
+                    btnCopy.style.backgroundColor = "#27ae60";
+                }, 1500);
+            });
+
+            btnClear.addEventListener("click", function() {
+                if (confirm("Möchtest du alle gesammelten Punkte wirklich löschen?")) {
+                    geklicktePunkte = [];
+                    loggerBox.value = "";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
