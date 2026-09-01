@@ -1,0 +1,1717 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4652789,
+                    51.5142273
+                ]
+            },
+            "properties": {
+                "titel": "DIWODO OPENING NIGHT. Tradition trifft Zukunft. Community trifft Kokerei.",
+                "ort": "Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-diwodo-opening-night-tradition-trifft-zukunft-community-trifft-kokerei",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.3780034,
+                    51.489215
+                ]
+            },
+            "properties": {
+                "titel": "Gründen mit Gemeinschaft – Mit der eigenen Genossenschaft etwas bewegen!",
+                "ort": "Wandweg 1, 44149 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-gruenden-mit-gemeinschaft-mit-der-eigenen-genossenschaft-etwas-bewegen",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "Security Escape Room - Session 2: Wie sicher sind Ihre Zugänge wirklich?",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-security-escape-room-session-2-wie-sicher-sind-ihre-zugaenge-wirklich",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4549866,
+                    51.498307
+                ]
+            },
+            "properties": {
+                "titel": "Wenn digitale Souveränität die Antwort ist, was war dann die Frage?",
+                "ort": "Rheinlanddamm 201, 44139 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-wenn-digitale-souveraenitaet-die-antwort-ist-was-war-dann-die-frage",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "DIGICOM#26 - B2B Ausstellung für Digitalisierung und Kommunikation",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-digicom-26-b2b-ausstellung-fuer-digitalisierung-und-kommunikation",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4884829,
+                    51.4872468
+                ]
+            },
+            "properties": {
+                "titel": "Fotografie im digitalen Zeitalter | mehr Transparenz für Ihr Unternehmen",
+                "ort": "Konrad-Zuse-Str. 1, 44263 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-fotografie-im-digitalen-zeitalter-mehr-transparenz-fuer-ihr-unternehmen",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.3780034,
+                    51.489215
+                ]
+            },
+            "properties": {
+                "titel": "Business Model Canvas - Fokussiert das Geschäftsmodell weiterentwickeln",
+                "ort": "Wandweg 1, 44149 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-business-model-canvas-fokussiert-das-geschaeftsmodell-weiterentwickeln",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4630234,
+                    51.5109982
+                ]
+            },
+            "properties": {
+                "titel": "Von der Gründung zur Skalierung",
+                "ort": "Hansastraße 101, 44137 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-von-der-gruendung-zur-skalierung-5",
+                "tag": 20
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4429585,
+                    51.5246014
+                ]
+            },
+            "properties": {
+                "titel": "Wie nachhaltig kann IT werden? - Forschungsimpuls 4: Nachhaltiges Software Engineering",
+                "ort": "Speicherstraße 6, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-wie-nachhaltig-kann-it-werden-forschungsimpuls-4-nachhaltiges-software-engineering",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "Digitalisierung für KMU: Montage- und Produktionsplanung",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-digitalisierung-fuer-kmu-montage-und-produktionsplanung",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "Wenn die Telefonanlage mitdenkt – Business Kommunikation mit KI Telefonassistenten",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-wenn-die-telefonanlage-mitdenkt-business-kommunikation-mit-ki-telefonassistenten-2",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4703197,
+                    51.4868523
+                ]
+            },
+            "properties": {
+                "titel": "AI made in Dortmund",
+                "ort": "Robert-Schuman-Straße 20, 44263 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-ai-made-in-dortmund-2",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4429585,
+                    51.5246014
+                ]
+            },
+            "properties": {
+                "titel": "Wie findet KI lokale Gesundheitsangebote? -  Forschungsimpuls 1: Das Projekt »Platform4Health«",
+                "ort": "Speicherstraße 6, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-wie-findet-ki-lokale-gesundheitsangebote-forschungsimpuls-1-das-projekt-platform4health",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4415687,
+                    51.5247186
+                ]
+            },
+            "properties": {
+                "titel": "Get #connected on Board – Wissenschaft trifft Wirtschaft auf der Santa Monika",
+                "ort": "Speicherstraße 2, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-digital-connect-ruhr-ost-an-bord-wissenschaft-ki-und-kooperation-im-dialog",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "Deutschlands Bester Hacker Challenge",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-deutschlands-bester-hacker-challenge",
+                "tag": 19
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4549866,
+                    51.498307
+                ]
+            },
+            "properties": {
+                "titel": "Mazes and Managers",
+                "ort": "Rheinlanddamm 201, 44139 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-mazes-and-managers",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "Aurora Agentic SOC - eine neue Ära der Cybersicherheit Unsere Mission – Cyberrisiken zu beenden.",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-aurora-agentic-soc-eine-neue-aera-der-cybersicherheit-unsere-mission-cyberrisiken-zu-beenden",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4429585,
+                    51.5246014
+                ]
+            },
+            "properties": {
+                "titel": "#diwodo Hafenquest - Die digitale Schnitzeljagd",
+                "ort": "Speicherstraße 6, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-diwodo-hafenquest-die-digitale-schnitzeljagd",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "FuckUp Night Dortmund",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-fuckup-night-dortmund",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4023718,
+                    51.4939582
+                ]
+            },
+            "properties": {
+                "titel": "KI & Tech Business Breakfast",
+                "ort": "Heinrich-Hertz-Straße 6, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-ki-tech-business-breakfast",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4021669,
+                    51.4927503
+                ]
+            },
+            "properties": {
+                "titel": "Praxisdialog: Intelligenter Einkauf – KI-Agenten zwischen Anforderungen, Prozessen und Menschen",
+                "ort": "Emil-Figge-Straße 90, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-praxisdialog-intelligenter-einkauf-ki-agenten-zwischen-anforderungen-prozessen-und-menschen",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4045805,
+                    51.4928078
+                ]
+            },
+            "properties": {
+                "titel": "Tag der Unternehmen - Algorithmen für die Praxis",
+                "ort": "Emil-Figge-Straße 80, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-tag-der-unternehmen-algorithmen-fuer-die-praxis",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.3931656,
+                    51.4934335
+                ]
+            },
+            "properties": {
+                "titel": "Serious Game: Psychologische Sicherheit erleben",
+                "ort": "Sebrathweg 7, 44149 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-serious-game-psychologische-sicherheit-erleben",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.5219942,
+                    51.5024232
+                ]
+            },
+            "properties": {
+                "titel": "Transforming E-Commerce Logistics: Automating Article Onboarding with Generative AI",
+                "ort": "Freie-Vogel-Str. 3875, 44269 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-transforming-e-commerce-logistics-automating-article-onboarding-with-generative-ai",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4649285,
+                    51.5172007
+                ]
+            },
+            "properties": {
+                "titel": "Digital Design Galaxy",
+                "ort": "Brückstraße 64, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-digital-design-galaxy",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4021669,
+                    51.4927503
+                ]
+            },
+            "properties": {
+                "titel": "Von der Idee zum Prototyp in 48 Stunden: KI als Innovationsbeschleuniger für die Energiewirtschaft",
+                "ort": "Emil-Figge-Straße 90, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-von-der-idee-zum-prototyp-in-48-stunden-ki-als-innovationsbeschleuniger-fuer-die-energiewirtschaft",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4746716,
+                    51.5094062
+                ]
+            },
+            "properties": {
+                "titel": "Vom ERP bis zum Shop: Skalierbare B2B-Plattformen für Hersteller & Großhändler",
+                "ort": "Heiliger Weg 60, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-vom-erp-bis-zum-shop-skalierbare-b2b-plattformen-fuer-hersteller-grosshaendler",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4153797,
+                    51.4912138
+                ]
+            },
+            "properties": {
+                "titel": "SciCAR-Konferenz | Where Science meets Computer-Assisted Reporting",
+                "ort": "Otto-Hahn-Str. 2, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-scicar-konferenz-where-science-meets-computer-assisted-reporting-2",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4049302,
+                    51.4888275
+                ]
+            },
+            "properties": {
+                "titel": "Alles Matcha oder was? Zwischen Trend und Tinnef",
+                "ort": "Joseph-von-Fraunhofer-Str. 29, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-alles-matcha-oder-was-zwischen-trend-und-tinnef-2",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4649285,
+                    51.5172007
+                ]
+            },
+            "properties": {
+                "titel": "Sparring — Ein KI-Agent zum Lernen und Lehren von Digital Design",
+                "ort": "Brückstraße 64, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-sparring-ein-ki-agent-zum-lernen-und-lehren-von-digital-design",
+                "tag": 19
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.503181,
+                    51.5109492
+                ]
+            },
+            "properties": {
+                "titel": "HANDWERK 2.0 - KOOPERATIV UND VERNETZT",
+                "ort": "Lange Reihe 62, 44143 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-handwerk-2-0-kooperativ-und-vernetzt",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4649285,
+                    51.5172007
+                ]
+            },
+            "properties": {
+                "titel": "Wenn die KI dein Fachgebiet nicht kennt: Wissensanreicherung von LLMs im Digital Design",
+                "ort": "Brückstraße 64, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-wenn-die-ki-dein-fachgebiet-nicht-kennt-wissensanreicherung-von-llms-im-digital-design",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4649285,
+                    51.5172007
+                ]
+            },
+            "properties": {
+                "titel": "Digital Design erleben - Projektpräsentation Digitale Straße & Energiekirche",
+                "ort": "Brückstraße 64, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-digital-design-erleben-projektpraesentation-digitale-strasse-energiekirche",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4469342,
+                    51.5262121
+                ]
+            },
+            "properties": {
+                "titel": "404: Strategy not found",
+                "ort": "Speicherstraße 33, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-404-strategy-not-found",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4458081,
+                    51.525509
+                ]
+            },
+            "properties": {
+                "titel": "Mittag im Nansen!",
+                "ort": "Speicherstraße 15, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-mittag-im-nansen",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4884106,
+                    51.5020512
+                ]
+            },
+            "properties": {
+                "titel": "Strategisches Marketing in der konkreten Umsetzung",
+                "ort": "Westfalendamm 741, 44141 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-strategisches-marketing-in-der-konkreten-umsetzung",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4816546,
+                    51.4860475
+                ]
+            },
+            "properties": {
+                "titel": "70% Mensch",
+                "ort": "Konrad-Adenauer-Allee 10, 44263 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-70-mensch",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4442968,
+                    51.5251317
+                ]
+            },
+            "properties": {
+                "titel": "Der Fachexperte als Entwickler — Am Beispiel eines CFO",
+                "ort": "Speicherstr. 8, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-der-fachexperte-als-entwickler-am-beispiel-eines-cfo-2",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "Live-Podcast auf der Kokerei Hansa: Sei Talk-Gast",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-live-podcast-auf-der-kokerei-hansa-sei-gast-oder-publikum",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4652789,
+                    51.5142273
+                ]
+            },
+            "properties": {
+                "titel": "RUN-RUN: KI - Kummer, lohnt sich nicht im Oberschenkel!",
+                "ort": "Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-run-run-ki-kummer-lohnt-sich-nicht-im-oberschenkel",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4429585,
+                    51.5246014
+                ]
+            },
+            "properties": {
+                "titel": "Kann KI vergessen? - Forschungsimpuls 3: Das Projekt DeFedOblivio",
+                "ort": "Speicherstraße 6, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-kann-ki-vergessen-forschungsimpuls-3-das-projekt-defedoblivio",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4884829,
+                    51.4872468
+                ]
+            },
+            "properties": {
+                "titel": "Deine Botschaft. Dein Vertrieb. Dein Erfolg. Wie du komplexe Angebote einfach vermittelst",
+                "ort": "Konrad-Zuse-Str. 1, 44263 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-deine-botschaft-dein-vertrieb-dein-erfolg-wie-du-komplexe-angebote-einfach-vermittelst-2",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4669479,
+                    51.5240851
+                ]
+            },
+            "properties": {
+                "titel": "CONF3RENCE Tag 1",
+                "ort": "Vor Ort",
+                "link": "https://diwodo.de/events/diwodo26-conf3rence-tag-1",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.3977678,
+                    51.4935289
+                ]
+            },
+            "properties": {
+                "titel": "Die KI-Richtlinien-Börse: Welche Spielregeln setzen wir und warum?",
+                "ort": "Sebrathweg 74, 44149 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-die-ki-richtlinien-boerse-welche-spielregeln-setzen-wir-und-warum",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4078467,
+                    51.4894539
+                ]
+            },
+            "properties": {
+                "titel": "TZDO Business Breakfast",
+                "ort": "Otto-Hahn-Straße 15, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-tzdo-business-breakfast",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4630234,
+                    51.5109982
+                ]
+            },
+            "properties": {
+                "titel": "Von der Gründung zur Skalierung",
+                "ort": "Hansastraße 101, 44137 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-von-der-gruendung-zur-skalierung-4",
+                "tag": 19
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4630234,
+                    51.5109982
+                ]
+            },
+            "properties": {
+                "titel": "Von der Gründung zur Skalierung",
+                "ort": "Hansastraße 101, 44137 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-von-der-gruendung-zur-skalierung-3",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "The Solution & Information Stage - #SIS26  <<MORNING SESSION>>",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-the-solution-information-stage-sis26-morning-session",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.3977678,
+                    51.4935289
+                ]
+            },
+            "properties": {
+                "titel": "Batterien als Teil der Energiewende: Von Kalifornien über China nach Münster-Amelsbüren",
+                "ort": "Sebrathweg 74, 44149 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-batterien-als-teil-der-energiewende-von-kalifornien-ueber-china-nach-muenster-amelsbueren",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4549866,
+                    51.498307
+                ]
+            },
+            "properties": {
+                "titel": "OUT OF CONTROL - E-Sports-Event im KITZ.do",
+                "ort": "Rheinlanddamm 201, 44139 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-out-of-control-e-sports-event-im-kitz-do",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4630234,
+                    51.5109982
+                ]
+            },
+            "properties": {
+                "titel": "Von der Gründung zur Skalierung",
+                "ort": "Hansastraße 101, 44137 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-von-der-gruendung-zur-skalierung",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4649285,
+                    51.5172007
+                ]
+            },
+            "properties": {
+                "titel": "Wie gesund ist eine digitale Lösung? Operationalisierung von Ganzheitlichkeit im Digital Design",
+                "ort": "Brückstraße 64, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-wie-gesund-ist-eine-digitale-loesung-operationalisierung-von-ganzheitlichkeit-im-digital",
+                "tag": 20
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4605487,
+                    51.5215748
+                ]
+            },
+            "properties": {
+                "titel": "Lerne Toastmasters Dortmund kennen!",
+                "ort": "Leopoldstraße 50, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-lerne-toastmasters-dortmund-kennen",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4669479,
+                    51.5240851
+                ]
+            },
+            "properties": {
+                "titel": "CONF3RENCE Tag 2 - Open Day",
+                "ort": "Vor Ort",
+                "link": "https://diwodo.de/events/diwodo26-conf3rence-tag-2-open-day",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4429585,
+                    51.5246014
+                ]
+            },
+            "properties": {
+                "titel": "Was passiert mit meinen Daten im Smart Home? - Forschungsimpuls 2: Das Projekt Opt-In",
+                "ort": "Speicherstraße 6, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-was-passiert-mit-meinen-daten-im-smart-home-forschungsimpuls-2-das-projekt-opt-in",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.452967,
+                    51.4937591
+                ]
+            },
+            "properties": {
+                "titel": "#Strobeln",
+                "ort": "Strobelallee 50, 44139 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-strobeln",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4458081,
+                    51.525509
+                ]
+            },
+            "properties": {
+                "titel": "Finale der #diwodo Hafenquest - get #connected!",
+                "ort": "Speicherstraße 15, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-finale-der-diwodo-hafenquest-get-connected",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4766922,
+                    51.4875878
+                ]
+            },
+            "properties": {
+                "titel": "AI made in Dortmund – ohne Fundament keine KI.",
+                "ort": "Walter-Bruch-Straße 8, 44263 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-ai-made-in-dortmund-ohne-fundament-keine-ki",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4023718,
+                    51.4939582
+                ]
+            },
+            "properties": {
+                "titel": "Dein Karriereweg in die IT",
+                "ort": "Heinrich-Hertz-Straße 6, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-dein-karriereweg-in-die-it",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "Telematik im Hier und Jetzt! Welches Potenzial bietet sich Unternehmen durch den Einsatz.",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-telematik-im-hier-und-jetzt-welches-potenzial-bietet-sich-unternehmen-durch-den-einsatz",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.5268307,
+                    51.5043163
+                ]
+            },
+            "properties": {
+                "titel": "AI made in Dortmund",
+                "ort": "Adessoplatz 1, 44269 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-ai-made-in-dortmund",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4556662,
+                    51.5130978
+                ]
+            },
+            "properties": {
+                "titel": "Auf ein Pilsken bei Bergmann - TALK",
+                "ort": "Hoher Wall 36, 44137 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-auf-ein-pilsken-bei-bergmann-talk",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "Security Escape Room - Session 1: Wie sicher sind Ihre Zugänge wirklich?",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-security-escape-room-session-1-wie-sicher-sind-ihre-zugaenge-wirklich",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "SPORT TECH CONNECT",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-sport-tech-connect",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4469342,
+                    51.5262121
+                ]
+            },
+            "properties": {
+                "titel": "Gründung des Open Source Boards Dortmund",
+                "ort": "Speicherstraße 33, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-gruendung-des-open-source-boards-dortmund",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.3977678,
+                    51.4935289
+                ]
+            },
+            "properties": {
+                "titel": "Agentenbasierte Prozessautomatisierung: Entwicklungspfade",
+                "ort": "Sebrathweg 74, 44149 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-agentenbasierte-prozessautomatisierung-entwicklungspfade",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4469342,
+                    51.5262121
+                ]
+            },
+            "properties": {
+                "titel": "Reboot your Company — OKR als Betriebssystem für krisenresistente Führung",
+                "ort": "Speicherstraße 33, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-reboot-your-company-okr-als-betriebssystem-fuer-krisenresistente-fuehrung",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4213854,
+                    51.4941153
+                ]
+            },
+            "properties": {
+                "titel": "IT-Sicherheitstag Dortmund",
+                "ort": "Emil-Figge-Str. 40, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-it-sicherheitstag-dortmund",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.407545,
+                    51.4940281
+                ]
+            },
+            "properties": {
+                "titel": "Labtour durch die Testzentren des Fraunhofer IML",
+                "ort": "Joseph-von-Fraunhofer Straße 2, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-labtour-durch-die-testzentren-des-fraunhofer-iml",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4153797,
+                    51.4912138
+                ]
+            },
+            "properties": {
+                "titel": "SciCAR-Konferenz | Where Science meets Computer-Assisted Reporting",
+                "ort": "Otto-Hahn-Str. 2, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-scicar-konferenz-where-science-meets-computer-assisted-reporting",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4549866,
+                    51.498307
+                ]
+            },
+            "properties": {
+                "titel": "Wie riskant ist eigentlich Künstliche Intelligenz?",
+                "ort": "Rheinlanddamm 201, 44139 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-wie-riskant-ist-eigentlich-kuenstliche-intelligenz",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4766922,
+                    51.4875878
+                ]
+            },
+            "properties": {
+                "titel": "KI-Sicherheit in der Praxis",
+                "ort": "Walter-Bruch-Straße 8, 44263 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-ki-sicherheit-in-der-praxis",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4004619,
+                    51.4930107
+                ]
+            },
+            "properties": {
+                "titel": "Innovation skalieren: Wenn Gründergeist auf Marktmacht trifft",
+                "ort": "Emil-Figge-Straße 802, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-innovation-skalieren-wenn-gruendergeist-auf-marktmacht-trifft",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.3780034,
+                    51.489215
+                ]
+            },
+            "properties": {
+                "titel": "Networking für neurodivergente Menschen",
+                "ort": "Wandweg 1, 44149 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-networking-fuer-neurodivergente-menschen",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4884829,
+                    51.4872468
+                ]
+            },
+            "properties": {
+                "titel": "Strategisches Marketing in der konkreten Umsetzung",
+                "ort": "Konrad-Zuse-Str. 1, 44263 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-strategisches-marketing-in-der-konkreten-umsetzung-2",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4686003,
+                    51.511224
+                ]
+            },
+            "properties": {
+                "titel": "Weniger Verwaltung, mehr Wirkung — ein Open-Source-Betriebssystem für KMU, Handwerk und Vereine!",
+                "ort": "Kleppingstraße 28, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-weniger-verwaltung-mehr-wirkung-ein-open-source-betriebssystem-fuer-kmu-handwerk-und-vereine",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4643833,
+                    51.5156533
+                ]
+            },
+            "properties": {
+                "titel": "URBAN PULSE - DIE ENTWICKLUNG VON METROPOLREGIONEN IST KOOPERATIV & DIGITAL",
+                "ort": "Hansastraße 30, 44137 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-urban-pulse-kooperativ-digital",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4643833,
+                    51.5156533
+                ]
+            },
+            "properties": {
+                "titel": "IT-Psychologie: Zwischen Technologie und Mensch",
+                "ort": "Hansastraße 30, 44137 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-it-psychologie-zwischen-technologie-und-mensch",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4644463,
+                    51.5156178
+                ]
+            },
+            "properties": {
+                "titel": "PROFESSIONAL TOOLBOX: KOOPERATIVE ENTWICKLUNG & PROJEKTMANAGEMENT",
+                "ort": "Hansastraße 30, 44143 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-professional-toolbox-kooperative-entwicklung-projektmanagement",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4762849,
+                    51.5119441
+                ]
+            },
+            "properties": {
+                "titel": "Noch ein neues Tool !?! Mindset first! Beschleunige Deine Digitalisierung",
+                "ort": "Prinz-Friedrich-Karl-Str. 14, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-noch-ein-neues-tool-mindset-first-beschleunige-deine-digitalisierung",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4603639,
+                    51.5134121
+                ]
+            },
+            "properties": {
+                "titel": "tech&talk Dortmund - Prompting für kleine LLMs & Ask Your Data(bricks)",
+                "ort": "Silberstraße 21, 44137 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-tech-talk-dortmund-prompting-fuer-kleine-llms-ask-your-data-bricks",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "PITCH BOOM BANG - Eine todsichere Fightnight",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-pitch-boom-bang-eine-todsichere-fightnight",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4665612,
+                    51.5039393
+                ]
+            },
+            "properties": {
+                "titel": "SDG-LUNCH - Wir müssen mit EUCH über EUREN Abfall sprechen",
+                "ort": "Ruhrallee 69, 44139 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-sdg-lunch-wir-muessen-mit-euch-ueber-euren-abfall-sprechen",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "Wenn die Telefonanlage mitdenkt – Business Kommunikation mit KI Telefonassistenten",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-wenn-die-telefonanlage-mitdenkt-business-kommunikation-mit-ki-telefonassistenten",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "The Solution & Information Stage - #SIS26  <<FULL DAY>>",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-the-solution-information-stage-sis26-it-konferenz-in-der-butter-lounge",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4039495,
+                    51.4915475
+                ]
+            },
+            "properties": {
+                "titel": "Die Wärmewende ist ein Gemeinschaftsprojekt – Eine innovative digitale Plattform macht’s möglich",
+                "ort": "Martin-Schmeißer-Weg 10, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-die-waermewende-ist-ein-gemeinschaftsprojekt-eine-innovative-digitale-plattform-macht-s-moeglich",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4724208,
+                    51.5161197
+                ]
+            },
+            "properties": {
+                "titel": "Sichtbarkeit von Marken im Digitalen",
+                "ort": "Schwanenwall 311, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-sichtbarkeit-von-marken-im-digitalen",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "Der Podcast zur DiWoDo 2026 live auf der Kokerei Hansa",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-der-podcast-zur-diwodo-2026-live-auf-der-kokerei-hansa",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4686003,
+                    51.511224
+                ]
+            },
+            "properties": {
+                "titel": "Weniger Verwaltung, mehr Wirkung — ein Open-Source-Betriebssystem für KMU, Handwerk und Vereine!",
+                "ort": "Kleppingstraße 28, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-weniger-verwaltung-mehr-wirkung-ein-open-source-betriebssystem-fuer-kmu-handwerk-und-vereine-2",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "The Solution & Information Stage - #SIS26  <<SIZZLING AFTERNOON>>",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-the-solution-information-stage-sis26-sizzling-afternoon",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4049302,
+                    51.4888275
+                ]
+            },
+            "properties": {
+                "titel": "Sofort auskunftsfähig: Wie KI Ihren Kundenservice revolutioniert",
+                "ort": "Joseph-von-Fraunhofer-Straße 29, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-sofort-auskunftsfaehig-wie-ki-ihren-kundenservice-revolutioniert",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.5223594,
+                    51.5004372
+                ]
+            },
+            "properties": {
+                "titel": "From Segfault to Safety @Conciso",
+                "ort": "Pariser Bogen 7, 44269 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-from-segfault-to-safety-conciso",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4649285,
+                    51.5172007
+                ]
+            },
+            "properties": {
+                "titel": "Digital Design erleben - Projektpräsentation Digital Design Galaxy & Kostbar 2.0",
+                "ort": "Brückstraße 64, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-digital-design-erleben-projektpraesentation-digital-design-galaxy-kostbar-2-0",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.5277326,
+                    51.5055916
+                ]
+            },
+            "properties": {
+                "titel": "Pitch, Deckel & Dialog - Impulse am Tresen",
+                "ort": "Freie-Vogel-Straße 383, 44269 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-pitch-deckel-dialog-impulse-am-tresen",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.407545,
+                    51.4940281
+                ]
+            },
+            "properties": {
+                "titel": "Stresstest Lieferkette: Wie krisenfest sind wir?",
+                "ort": "Joseph-von-Fraunhofer Straße 2, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-stresstest-lieferkette-wie-krisenfest-sind-wir",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4652789,
+                    51.5142273
+                ]
+            },
+            "properties": {
+                "titel": "KI-REALITY-CHECK: Wie KI Dortmunds Wirtschaft verändert",
+                "ort": "Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-ki-check-dortmund",
+                "tag": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4630234,
+                    51.5109982
+                ]
+            },
+            "properties": {
+                "titel": "Von der Gründung zur Skalierung",
+                "ort": "Hansastraße 101, 44137 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-von-der-gruendung-zur-skalierung-2",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.3780034,
+                    51.489215
+                ]
+            },
+            "properties": {
+                "titel": "Gesundheit endet nicht am Werkstor",
+                "ort": "Wandweg 1, 44149 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-gesundheit-endet-nicht-am-werkstor",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4411581,
+                    51.5291395
+                ]
+            },
+            "properties": {
+                "titel": "Schnitzelessen bei NIRO",
+                "ort": "Kanalstr. 25, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-schnitzelessen-bei-niro",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4884106,
+                    51.5020512
+                ]
+            },
+            "properties": {
+                "titel": "Was ist wirklich gute Cybersecurity?",
+                "ort": "Westfalendamm 741, 44141 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-was-ist-wirklich-gute-cybersecurity",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4686003,
+                    51.511224
+                ]
+            },
+            "properties": {
+                "titel": "Spielend die Stadt von morgen entdecken",
+                "ort": "Kleppingstraße 28, 44135 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-spielend-die-stadt-von-morgen-entdecken",
+                "tag": 16
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4044908,
+                    51.4891805
+                ]
+            },
+            "properties": {
+                "titel": "Steigerung der Energieeffizienz von Gebäuden durch Digitalisierung der Wärmekette",
+                "ort": "Otto-Hahn-Straße 23, 44227 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-steigerung-der-energieeffizienz-von-gebaeuden-durch-digitalisierung-der-waermekette",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4124528,
+                    51.540692
+                ]
+            },
+            "properties": {
+                "titel": "The Solution & Information Stage - #SIS26  <<MIDDAY INSIGHTS>>",
+                "ort": "Emscherallee 11, 44369 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-the-solution-information-stage-sis26-midday-insights",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4458081,
+                    51.525509
+                ]
+            },
+            "properties": {
+                "titel": "XR für Berufsorientierung und Recruiting",
+                "ort": "Speicherstraße 15, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-xr-fuer-berufsorientierung-und-recruiting",
+                "tag": 18
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4884106,
+                    51.5020512
+                ]
+            },
+            "properties": {
+                "titel": "Deine Botschaft. Dein Vertrieb. Dein Erfolg. Wie du komplexe Angebote einfach vermittelst",
+                "ort": "Westfalendamm 741, 44141 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-deine-botschaft-dein-vertrieb-dein-erfolg-wie-du-komplexe-angebote-einfach-vermittelst",
+                "tag": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.3780034,
+                    51.489215
+                ]
+            },
+            "properties": {
+                "titel": "LEGO Serious Play: Test it: More Ideas & TeamSpirit im Projekt mit LEGO Serious Play",
+                "ort": "Wandweg 1, 44149 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-test-it-more-ideas-teamspirit-im-projekt-mit-lego-serious-play",
+                "tag": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4442968,
+                    51.5251317
+                ]
+            },
+            "properties": {
+                "titel": "Der Fachexperte als Entwickler — Am Beispiel eines CFO",
+                "ort": "Speicherstr. 8, 44147 Dortmund",
+                "link": "https://diwodo.de/events/diwodo26-der-fachexperte-als-entwickler-am-beispiel-eines-cfo",
+                "tag": 18
+            }
+        }
+    ]
+}
