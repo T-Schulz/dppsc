@@ -22,7 +22,7 @@ Das Ziel des Projektes ist daher zu untersuchen wie gut Daten mit Smart City Bez
 
 **Methoden:**   
 Mit klassischen Data Science Methoden sollen Daten vom Open Data Portal Dortmund
-geladen, ggfs. aufgereitet, analysiert und graphisch dargestellt werden.  
+geladen, ggfs. aufbereitet, analysiert und graphisch dargestellt werden.  
 Beispiel Daten:   
 [Offene Geodaten der Stadt Dortmund](https://geoweb1.digistadtdo.de/doris_gdi/opengeodata/alkis/)  
 
